@@ -1,0 +1,56 @@
+/*---
+-- Stylesheet 
+---- includes/filter.html 
+---*/
+
+#WIP{
+  width: 78vw;
+  height: 100vh;
+  padding: 0 11vw;
+  background: black;
+  position: absolute;
+  opacity: .9;
+  z-index: 10;
+  color:white;
+  font-family: "Quicksandregular", sans-serif;
+  .content{
+    padding-top: 50%;
+  }
+  h2{
+    font-size: 1.25em;
+    color:#56D457;
+    margin-bottom: 1.25em;
+
+    &::before{
+      content:"";
+      position: relative;
+      display: block;
+      width: 90px;
+      height: 33px;
+      margin: 0 auto;
+      margin-bottom: 0.65em;
+      background: url(../img/icon_filter--green.svg) no-repeat center;
+      background-size: 95%;
+    }
+    b{
+      display: block;
+    }
+  }
+  p{
+    text-align: left;
+    line-height: 150%;
+  }
+
+  a{
+    position:absolute;
+    bottom:28vw;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: white;
+    border:2px solid white;
+    padding: 0.65em 2.3125em;
+    border-radius: 100px;
+    font-family: "Quicksandbold", sans-serif;
+  }
+}

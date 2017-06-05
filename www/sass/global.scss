@@ -1,0 +1,78 @@
+#canvas{
+	display: none;
+	z-index:-100;
+}
+#rgbvalue{
+	display:none;
+}
+/*---
+-- GLOBAL
+---*/
+body{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background:transparent;
+	overflow: hidden;
+	font-size: 16px;
+}
+h1{
+	font-family: 'linottebold', sans-serif;
+}
+h1,h2,h3,p,i{
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-weight: normal;
+}
+button{
+	background: transparent;
+	border: none;
+	outline: none;
+	padding-left:0;
+	padding-right:0;
+}
+.clearfix::after{
+	display:block;
+	content:"";
+	clear:both;
+}
+/*---
+-- ALL SCREENS
+---*/
+.screen{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background:transparent;
+	&--picker{
+		text-align: center;
+
+	}
+	&--colors{
+		background: white;
+	}
+}
+
+/*---
+-- Remove transition
+---*/
+
+.transition{            
+  -webkit-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+
+/*---
+-- REPONSIVES
+---- max-width: 320px
+---*/
+
+@media screen and (max-width: 320px) {
+	body{
+		font-size:90%;
+	}
+}

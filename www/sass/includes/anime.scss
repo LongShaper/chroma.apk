@@ -1,0 +1,277 @@
+/*---
+-- Animations
+---*/
+
+@-webkit-keyframes opacity{
+  0% {
+    opacity: 0;
+  }
+  10%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity{
+  0% {
+    opacity: 0;
+  }
+  10%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes bounce{
+  0% {
+      -webkit-transform: scale3d(0,0,0) translate3d(-50%,-50%,0);
+      opacity: 0;
+  }
+  30%{
+      -webkit-transform: scale3d(.95,.95,.95) translate3d(-50%,-50%,0);
+  }
+  60%{
+      -webkit-transform: scale3d(1.1,1.1,1.1) translate3d(-50%,-50%,0);
+  }
+  100% {
+      -webkit-transform: scale3d(1,1,1) translate3d(-50%,-50%,0);
+      opacity: 1;
+  }
+}
+
+@keyframes bounce{
+  0% {
+      transform: scale3d(0,0,0) translate3d(-50%,-50%,0);
+      opacity: 0;
+  }
+  30%{
+      transform: scale3d(.95,.95,.95) translate3d(-50%,-50%,0);
+  }
+  60%{
+      transform: scale3d(1.1,1.1,1.1) translate3d(-50%,-50%,0);
+  }
+  100% {
+      transform: scale3d(1,1,1) translate3d(-50%,-50%,0);
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes appear{
+  0% {
+      -webkit-transform: scale3d(.5,.5,.5) translate3d(-200%,0,0);
+      opacity: 0;
+  }
+  40%{
+      -webkit-transform: translate3d(0%,0,0);
+      opacity: 1;
+  }
+  60%{
+      -webkit-transform: scale3d(1.25,1.25,1.25);
+  }
+  100% {
+      -webkit-transform: scale3d(1,1,1);
+      opacity: 1;
+  }
+}
+
+@keyframes appear{
+  0% {
+      transform: scale3d(.5,.5,.5) translate3d(-200%,0,0);
+      opacity: 0;
+  }
+  40%{
+      transform: translate3d(0%,0,0);
+      opacity: 1;
+  }
+  60%{
+      transform: scale3d(1.25,1.25,1.25);
+  }
+  100% {
+      transform: scale3d(1,1,1);
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes disappear{
+  0% {
+      -webkit-transform: scale3d(.8,.8,.8);
+      opacity: 1;
+  }
+  60% {
+      -webkit-transform: scale3d(1.2,1.2,1.2);
+      opacity: 1;
+  }
+  100% {
+      -webkit-transform: scale3d(0,0,0);
+      opacity: 0;
+  }
+}
+
+@keyframes disappear{
+  0% {
+      transform: scale3d(.8,.8,.8);
+      opacity: 1;
+  }
+  60% {
+      transform: scale3d(1.2,1.2,1.2);
+      opacity: 1;
+  }
+  100% {
+      transform: scale3d(0,0,0);
+      opacity: 0;
+  }
+}
+
+@-webkit-keyframes notif{
+  0% {
+      -webkit-transform: translate3d(0,-100%,0);
+      opacity: 0;
+  }
+  25% {
+      -webkit-transform: translate3d(0,0,0);
+      opacity: 1;
+  }
+  75% {
+      -webkit-transform: translate3d(0,0,0);
+      opacity: 1;
+  }
+  100% {
+      -webkit-transform: translate3d(0,-100%,0);
+      opacity: 0;
+  }
+}
+
+
+
+/* -
+-- Button actions animation colors.html
+- */
+.listcolors_el--anime .listactions{
+	&_el .icon{
+    opacity:1;
+      -webkit-transform: scale3d(1,1,1) translate3d(0%,0%,0);
+      transform: scale3d(1,1,1) translate3d(0%,0%,0);
+
+      -webkit-transition: .35s cubic-bezier(.01,.01,.04,1.73);
+      transition: .35s cubic-bezier(.01,.01,.04,1.73);
+    }
+    /* Delete button targetable when open*/
+    & li:first-child a{
+      z-index:10;
+      position:relative;
+      opacity:1;
+    }     
+    & li:nth-child(2) .icon{
+      opacity:0;
+    }    
+    & li:nth-child(3) .icon{
+      -webkit-transition-delay: .1s;
+      transition-delay: .1s;
+    }  
+    & li:nth-child(4) .icon{
+      -webkit-transition-delay: .2s;
+      transition-delay: .2s;
+    }  
+    & li:nth-child(5) .icon{
+      -webkit-transition-delay: .3s;
+      transition-delay: .3s;
+    }
+}
+
+/* -
+-- Button label(text) animation colors.html
+- */
+
+.listcolors_el--anime .listactions_el .label{
+    opacity:1;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+/* -
+-- loading animation colors.html
+- */
+.listactions--active .listactions_el--load .icon svg .dot{
+    opacity: 0;
+    -webkit-animation: opacity 1s ease-in infinite;
+    animation: opacity 1s ease-in infinite;
+
+    &:first-child{ 
+        -webkit-animation-delay:0s;
+        animation-delay:0s;
+    }    
+    &:nth-child(2){ 
+        -webkit-animation-delay:.2s;
+        animation-delay:.2s;
+    }    
+    &:nth-child(3){ 
+        -webkit-animation-delay:.4s;
+        animation-delay:.4s;
+    }
+}
+.listactions .listactions_el--load{
+    opacity:0;
+    -webkit-transition:.35s ease-in-out;
+    transition:.35s ease-in-out;
+}
+
+.listactions--active .listactions_el--load{
+    position:absolute;
+    -webkit-transition: .35s .2s ease-in-out;
+    transition: .35s .2s ease-in-out;
+    opacity:1;
+}
+.listactions .listactions_el--load .icon svg .dot{
+    opacity:0;
+}
+
+/* -
+-- popup animation colors.html
+- */
+
+.colorpopup{
+  z-index:-10;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.colorpopup--actif{
+  z-index:50;
+  -webkit-animation: bounce .25s ease-out forwards; /*.35s*/
+  animation: bounce .25s ease-out forwards;
+}
+
+/* -
+-- colorinfo_add animation picker.html
+- */
+.colorinfo_add--actif{
+  -webkit-animation: appear .4s ease-out forwards;
+  animation: appear .4s ease-out forwards;
+}
+.colorinfo_add--animeAdd{
+  -webkit-animation: disappear .4s ease-out forwards;
+  animation: disappear .4s ease-out forwards;
+}
+
+/* -
+-- notifadd animation picker.html
+- */
+.notifadd--animeAdd{
+  -webkit-animation: notif 4s ease forwards;
+  animation: notif 4s ease forwards;
+}
